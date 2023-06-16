@@ -1,2 +1,3 @@
 # hy-POC
-本人自己编写的poc，yaml格文件式可以直接用xray使用
+本人自己编写的poc，yaml文件格式用xray直接调用
+
