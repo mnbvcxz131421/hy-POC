@@ -1,5 +1,6 @@
 # hy-POC
-本人自己编写的poc，yaml文件格式用xray直接调用
+内容仅供学习出了事情自己负责别找我谢谢！！！
+本人自己编写的poc，yaml文件格式xray直接调用
 
 漏洞信息
 用友 畅捷通T+ DownloadProxy.aspx 任意文件读取漏洞
